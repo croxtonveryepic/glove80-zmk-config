@@ -719,30 +719,28 @@ behaviors {
 / {
     macros {
         en_dash: en_dash {
-            label = "UNICODE_EM_DASH";
+            label = "EN_DASH";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
             wait-ms = <0>;
             bindings
-                = <&macro_press &kp LCTRL &kp LSHFT>
-                , <&macro_tap &kp U>
-                , <&macro_release &kp LCTRL &kp LSHFT>
-                , <&macro_tap &kp N2 &kp N0 &kp N1 &kp N3 &kp SPC>
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N0>
+                , <&macro_release &kp LALT>
                 ;
         };
 
         em_dash: em_dash {
-            label = "UNICODE_EM_DASH";
+            label = "EM_DASH";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <0>;
             wait-ms = <0>;
             bindings
-                = <&macro_press &kp LCTRL &kp LSHFT>
-                , <&macro_tap &kp U>
-                , <&macro_release &kp LCTRL &kp LSHFT>
-                , <&macro_tap &kp N2 &kp N0 &kp N1 &kp N4 &kp SPC>
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N1>
+                , <&macro_release &kp LALT>
                 ;
         };
     };
