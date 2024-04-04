@@ -26,6 +26,7 @@
 #define LAYER_R_Primary_Nums 2
 #define LAYER_R_Secondary_Functions 3
 #define LAYER_L_Primary_Functions 4
+#define LAYER_L_Tertiary_Parens 5
 
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
@@ -717,7 +718,33 @@ behaviors {
 /* Automatically generated macro definitions */
 / {
     macros {
-    
+        en_dash: en_dash {
+            label = "UNICODE_EM_DASH";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LSHFT>
+                , <&macro_tap &kp U>
+                , <&macro_release &kp LCTRL &kp LSHFT>
+                , <&macro_tap &kp N2 &kp N0 &kp N1 &kp N3 &kp SPC>
+                ;
+        };
+
+        em_dash: em_dash {
+            label = "UNICODE_EM_DASH";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LSHFT>
+                , <&macro_tap &kp U>
+                , <&macro_release &kp LCTRL &kp LSHFT>
+                , <&macro_tap &kp N2 &kp N0 &kp N1 &kp N4 &kp SPC>
+                ;
+        };
     };
 };
 
@@ -730,11 +757,11 @@ behaviors {
         layer_Base {
             bindings = <
                 &none               &none               &none                &none                &none                                                                                                                   &none                 &none                &none                &none                 &none
-                &none               &none               &none          &kp KP_LPAR             &kp LBRC   &none                                                                                     &none              &kp RBRC           &kp KP_RPAR                &none                &none                 &none
+                &none               &none               &none          &kp LEFT_PARENTHESIS             &kp LBRC   &none                                                                                     &none              &kp RBRC           &kp RIGHT_PARENTHESIS                &none                &none                 &none
                 &none            &kp LBKT               &kp D                &kp R                &kp W   &kp B                                                                                     &kp J                 &kp F                 &kp U                &kp P             &kp RBKT                 &none
                 &kp Q  &left_pinky LGUI A  &left_ring1 LALT S  &left_middy LCTRL H  &left_index LSHFT T   &kp G                                                                                     &kp Y  &right_index LSHFT N  &right_middy LCTRL E  &right_ring1 LALT O  &right_pinky LGUI I               &kp SQT
             &kp GRAVE               &kp Z               &kp X                &kp M                &kp C   &kp V  &kp C_VOL_DN  &kp C_VOL_UP     &kp C_NEXT  &kp C_MUTE    &kp C_PP    &key_repeat   &kp K                 &kp L             &kp COMMA              &kp DOT             &kp FSLH              &kp SEMI
- &magic LAYER_Magic 0            &kp HOME             &kp END             &kp LEFT            &kp RIGHT             &lt 3 TAB   &lt 2 SPACE  &mt LSHFT ESC     &kp DEL  &lt 4 BSPC  &mt RCTRL RET                        &kp UP              &kp DOWN            &kp PG_UP            &kp PG_DN  &magic LAYER_Magic 0
+ &magic LAYER_Magic 0            &kp HOME             &kp END             &kp LEFT            &kp RIGHT             &lt 3 TAB   &lt 2 SPACE  &mt LSHFT ESC   &lt 5 DEL  &lt 4 BSPC  &mt RCTRL RET                        &kp UP              &kp DOWN            &kp PG_UP            &kp PG_DN  &magic LAYER_Magic 0
             >;
         };
 
@@ -779,6 +806,17 @@ behaviors {
  &kp F12  &kp F11  &kp F4  &kp F5  &kp F6  &kp PSCRN                                                   &none  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI   &none
    &none  &kp F10  &kp F1  &kp F2  &kp F3   &kp CAPS   &none   &none   &none   &none   &none   &none   &none      &none      &none     &none     &none   &none
    &none    &none   &none   &none   &none              &none   &none   &none   &none   &none   &none              &none      &none     &none     &none   &none
+            >;
+        };
+
+        layer_L_Tertiary_Parens {
+            bindings = <
+ &trans  &trans     &trans       &trans       &trans                                                                  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans     &trans       &trans       &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &kp MINUS  &en_dash  &em_dash   &none                                                  &trans  &trans  &trans  &trans  &trans  &trans
+  &none   &none   &kp LBKT     &kp LEFT_PARENTHESIS     &kp LBRC   &none                                                  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans   &none   &kp RBKT     &kp RIGHT_PARENTHESIS     &kp RBRC   &none  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans     &trans       &trans       &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
