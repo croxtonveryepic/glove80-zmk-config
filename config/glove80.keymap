@@ -785,13 +785,13 @@ behaviors {
             >;
         };
 
-        layer_R_Secondary_Functions {
+        layer_R_Secondary_Mouse {
             bindings = <
  &trans  &trans  &trans  &trans  &trans                                                                    &trans     &trans     &trans     &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans    &trans     &trans     &trans     &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans     &none      &none      &none     &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                   &none  &kp LEFT     &kp UP   &kp DOWN  &kp RIGHT   &none
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp PG_UP  &kp PG_DN    &kp END  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp F24     &none      &kp F23      &none     &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                                                   &none  &kp F21     &kp F20   &kp F22  &kp RIGHT   &none
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PG_UP  &kp PG_DN  &none    &none  &trans
  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans             &none      &none      &none     &trans  &trans
             >;
         };
