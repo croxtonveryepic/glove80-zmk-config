@@ -759,7 +759,7 @@ behaviors {
                 &none            &kp LBKT               &kp D                &kp R                &kp W   &kp B                                                                                     &kp J                 &kp F                 &kp U                &kp P             &kp RBKT                 &none
                 &kp Q  &left_pinky LGUI A  &left_ring1 LALT S  &left_middy LCTRL H  &left_index LSHFT T   &kp G                                                                                     &kp Y  &right_index LSHFT N  &right_middy LCTRL E  &right_ring1 LALT O  &right_pinky LGUI I               &kp SQT
             &kp GRAVE               &kp Z               &kp X                &kp M                &kp C   &kp V  &kp C_VOL_DN  &kp C_VOL_UP     &kp C_NEXT  &kp C_MUTE    &kp C_PP    &key_repeat   &kp K                 &kp L             &kp COMMA              &kp DOT             &kp FSLH              &kp SEMI
- &magic LAYER_Magic 0            &kp HOME             &kp END             &kp LEFT            &kp RIGHT             &lt 3 TAB   &lt 2 SPACE  &mt LSHFT ESC   &lt 5 DEL  &lt 4 BSPC  &mt RCTRL RET                        &kp UP              &kp DOWN            &kp PG_UP            &kp PG_DN  &magic LAYER_Magic 0
+ &magic LAYER_Magic 0            &kp HOME             &kp END             &kp LEFT            &kp RIGHT             &lt 2 TAB   &lt 3 SPACE  &mt LSHFT ESC   &lt 5 DEL  &lt 4 BSPC  &mt RCTRL RET                        &kp UP              &kp DOWN            &kp PG_UP            &kp PG_DN  &magic LAYER_Magic 0
             >;
         };
 
@@ -774,7 +774,7 @@ behaviors {
             >;
         };
 
-        layer_R_Primary_Nums {
+        layer_R_Secondary_Nums {
             bindings = <
   &none     &none     &none      &none      &none                                                                            &none   &none      &none      &none   &none
   &none     &none     &none      &none      &none   &none                                                         &none      &none   &none      &none      &none   &none
@@ -785,14 +785,14 @@ behaviors {
             >;
         };
 
-        layer_R_Secondary_Mouse {
+        layer_R_Primary_Mouse {
             bindings = <
  &trans  &trans  &trans  &trans  &trans                                                                    &trans     &trans     &trans     &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans    &trans     &trans     &trans     &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp F24     &none      &kp F23      &none     &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                   &none  &kp F21     &kp F20   &kp F22  &kp RIGHT   &none
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PG_UP  &kp PG_DN  &none    &none  &trans
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans             &none      &none      &none     &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp F24   &kp F19      &kp F23    &kp F18      &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                                                  &none     &kp F21    &kp F20    &kp F22    &kp RIGHT   &none
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &kp PG_UP  &kp PG_DN  &none      &none  &trans
+ &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans            &none      &none      &none      &trans  &trans
             >;
         };
 
