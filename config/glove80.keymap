@@ -20,6 +20,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 
+&lt {
+    quick_tap_ms = <300>;
+};
+
 /* Automatically generated layer name #define */
 #define LAYER_Base 0
 #define LAYER_Magic 1
