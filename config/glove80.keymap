@@ -272,7 +272,7 @@
 / {
     // NOTE: Use the `#define` settings below to customize this keymap!
 // For example, here are the main optional features you can enable:
-#define DIFFICULTY_LEVEL  3.5 // 0:custom, 1:easy -> 5:hard (see below)
+#define DIFFICULTY_LEVEL  4 // 0:custom, 1:easy -> 5:hard (see below)
 // TIP: Add more setting overrides here instead of editing them below.
 
 //////////////////////////////////////////////////////////////////////////////
@@ -296,7 +296,7 @@
 // #define DIFFICULTY_LEVEL 5 // expert (100ms)
 //
 #if defined(DIFFICULTY_LEVEL) && DIFFICULTY_LEVEL > 0
-#define DIFFICULTY_THRESHOLD ((6-DIFFICULTY_LEVEL)*100)
+#define DIFFICULTY_THRESHOLD (((6-DIFFICULTY_LEVEL)*100)+50)
 #ifndef HOMEY_HOLDING_TIME
 #define HOMEY_HOLDING_TIME DIFFICULTY_THRESHOLD
 #endif
