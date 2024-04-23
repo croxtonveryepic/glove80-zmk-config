@@ -183,7 +183,6 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&rgb_ug_status_macro>;
         };
-/*
         repeat_tap: repeat_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "REPEAT_TAP";
@@ -192,7 +191,6 @@
             tapping-term-ms = <300>;
             bindings = <&mo>, <&key_repeat>;
         };
-*/  
     };
 };
 
@@ -774,7 +772,7 @@ behaviors {
                 &none  &none  &kp L  &kp H  &kp K &kp Q     &kp J &kp F &kp O &kp U &none &none
                 &kp V  &left_pinky LGUI S  &left_ring1 LALT R  &left_middy LCTRL N  &left_index LSHFT T   &kp W     &kp Y  &right_index LSHFT C  &right_middy LCTRL A  &right_ring1 LALT E  &right_pinky LGUI I &kp COMMA
             &none &kp Z &kp X &kp M &kp D &kp B  &kp C_VOL_DN  &kp C_VOL_UP &kp C_NEXT  &kp C_MUTE    &kp C_PP    &kp DEL   &kp P &kp G &kp SQT &kp SEMI &kp DOT &none
- &magic LAYER_Magic 0 &kp HOME &kp END &kp LEFT &kp RIGHT             &lt 2 TAB  &lt 3 SPACE  &mt CAPS ESC   &lt 6 RET  &key_repeat &lt 5 BSPC &kp UP &kp DOWN &kp PG_UP &kp PG_DN  &magic LAYER_Magic 0
+ &magic LAYER_Magic 0 &kp HOME &kp END &kp LEFT &kp RIGHT             &lt 2 TAB  &lt 3 SPACE  &mt CAPS ESC   &lt 6 RET  &repeat_tap 4 0 &lt 5 BSPC &kp UP &kp DOWN &kp PG_UP &kp PG_DN  &magic LAYER_Magic 0
             >;
         };
 
