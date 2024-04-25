@@ -173,42 +173,6 @@
 #endif
 };
 
-/ {
-    behaviors {
-        magic: magic {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAGIC_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&rgb_ug_status_macro>;
-        };
-        repeat_tap: repeat_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "REPEAT_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <300>;
-            bindings = <&mo>, <&key_repeat>;
-        };
-        caps_tap: caps_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "REPEAT_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <300>;
-            bindings = <&caps_word>, <&kp>;
-        };
-        blht: base_layer_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <DIFFICULTY_THRESHOLD>;
-            bindings = <&kp>, <&kp>;
-        };
-    };
-};
-
 /* #define for key positions */
 #define POS_LH_T1 52
 #define POS_LH_T2 53
@@ -741,6 +705,43 @@ behaviors {
 
 };
 };
+
+/ {
+    behaviors {
+        magic: magic {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAGIC_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&rgb_ug_status_macro>;
+        };
+        repeat_tap: repeat_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "REPEAT_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            bindings = <&mo>, <&key_repeat>;
+        };
+        caps_tap: caps_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "REPEAT_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            bindings = <&caps_word>, <&kp>;
+        };
+        blht: base_layer_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <DIFFICULTY_THRESHOLD>;
+            bindings = <&kp>, <&kp>;
+        };
+    };
+};
+
 
 /* Automatically generated macro definitions */
 / {
