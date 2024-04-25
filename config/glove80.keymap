@@ -726,7 +726,6 @@ behaviors {
         };
         caps_tap: caps_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "REPEAT_TAP";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <300>;
