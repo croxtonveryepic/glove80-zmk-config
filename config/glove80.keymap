@@ -784,9 +784,9 @@ behaviors {
             bindings = <
     &none      &none     &none      &none      &none                                                                         &none    &none    &none    &none   &tog 4
     &none      &none     &none      &none      &none     &none                                                      &none    &none    &none    &none    &none   &none
-    &none      &none   &blht DQT F   &blht SQT L  &blht GRAVE K     &none                                                      &none  &blht MINUS W  &blht UNDER O  &blht PLUS U &none &none
- &blht PIPE Q   &left_pinky LGUI N  &left_ring1 LALT S  &left_middy LCTRL R  &left_index LSHFT T  &blht EXCL M                                                    &blht CARET G  &right_index LSHFT C  &right_middy LCTRL A  &right_ring1 LALT E  &right_pinky LGUI I  &blht BSLH J
-    &none  &blht QMARK B  &blht SEMI V    &blht DOT H  &blht COMMA D     &none   &kp C_VOL_DN  &kp C_VOL_UP &kp C_NEXT  &kp C_MUTE    &kp C_PP    &kp DEL       &none   &blht FSLH P  &blht EQUAL X  &blht STAR Z  &blht COLON Y     &none
+    &none      &none   &blht DQT F   &blht SQT M  &blht GRAVE H     &none                                                      &none  &blht MINUS K  &blht UNDER W  &blht PLUS G &none &none
+ &blht PIPE Z   &left_pinky LGUI N  &left_ring1 LALT S  &left_middy LCTRL T  &left_index LSHFT R  &blht EXCL Q                                                    &blht CARET J  &right_index LSHFT A  &right_middy LCTRL E  &right_ring1 LALT C  &right_pinky LGUI I  &blht BSLH X
+    &none  &blht QMARK B  &blht SEMI V    &blht DOT D  &blht COMMA L     &none   &kp C_VOL_DN  &kp C_VOL_UP &kp C_NEXT  &kp C_MUTE    &kp C_PP    &kp DEL       &none   &blht FSLH O  &blht EQUAL U  &blht STAR P  &blht COLON Y     &none
      &magic LAYER_Magic 0 &kp HOME &kp END &kp LEFT &kp RIGHT             &lt 5 TAB  &lt 4 SPACE  &caps_tap 0 ESC    &kp DEL &lt 2 BSPC &lt 3 RET    &kp UP &kp DOWN &kp PG_UP &kp PG_DN  &magic LAYER_Magic 0
             >;
         };
