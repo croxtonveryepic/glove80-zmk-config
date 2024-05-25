@@ -782,7 +782,7 @@ behaviors {
 
         layer_Base {
             bindings = <
-    &none      &none     &none      &none      &none                                                                         &tog 6    &none    &none    &none   &tog 4
+    &none      &none     &none      &none      &none                                                                         &tog 6    &tog 7    &none    &none   &tog 4
     &none      &none     &none      &none      &none     &none                                                      &none    &none    &none    &none    &none   &none
     &none      &none   &blht DQT F   &blht MINUS M  &blht GRAVE H     &none                                                      &none  &blht UNDER K  &blht SQT W  &blht PLUS G &none &none
  &blht PIPE Z   &left_pinky LGUI N  &left_ring1 LALT S  &left_middy LCTRL T  &left_index LSHFT R  &blht EXCL Q                                                    &blht CARET J  &right_index LSHFT A  &right_middy LCTRL E  &right_ring1 LALT C  &right_pinky LGUI I  &blht BSLH X
@@ -846,7 +846,7 @@ behaviors {
             >;
         };
 
-        layer_games {
+        layer_games_qwerty {
             bindings = <
     &none      &none     &none      &none      &none                                                                         &tog 6    &none    &none    &none   &none
     &none      &none     &none      &none      &none     &none                                                      &none    &none    &none    &none    &none   &none
@@ -854,6 +854,17 @@ behaviors {
  &none   &kp LSHFT  &kp A  &kp W  &kp D  &none                                                    &kp INS  &kp F18  &kp F19  &kp F20  &kp F24  &trans
     &none  &kp LCTRL  &none    &kp S  &none     &none   &none   &none   &none   &none    &none    &none    &none  &kp F15  &kp F16  &kp F17   &trans   &none
     &none      &trans    &trans    &trans    &trans             &kp TAB   &kp SPACE   &kp ESC   &none  &kp F13  &kp F14             &trans    &trans    &trans    &trans   &none
+            >;
+        };
+
+        layer_games {
+            bindings = <
+    &none      &none     &none      &none      &none                                                                         &none    &tog 7    &none    &none   &none
+    &none      &none     &none      &none      &none     &none                                                      &none    &none    &none    &none    &none   &none
+    &none      &none   &kp F   &kp M  &kp H     &none                                                      &none  &kp K  &kp W  &kp G &none &none
+ &kp Z   &kp N  &kp S  &kp T  &kp R  &kp Q                                                    &kp J  &kp A  &kp E  &kp C  &kp I  &kp X
+    &none  &kp B  &kp V    &kp D  &kp L     &none   &kp C_VOL_DN  &kp C_VOL_UP &kp C_NEXT  &kp C_MUTE    &kp C_PP    &kp DEL       &none   &kp O  &kp U  &kp P  &kp Y     &none
+     &magic LAYER_Magic 0 &kp HOME &kp END &kp LEFT &kp RIGHT             &left_index CTRL TAB  &kp SPACE  &caps_tap 0 ESC    &kp DEL &kp BSPC &kp RET    &kp UP &kp DOWN &kp PG_UP &kp PG_DN  &magic LAYER_Magic 0
             >;
         };
     };
