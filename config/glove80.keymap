@@ -861,10 +861,10 @@ behaviors {
             bindings = <
     &none      &none     &none      &none      &none                                                                         &none    &tog 7    &none    &none   &none
     &none      &none     &none      &none      &none     &none                                                      &none    &none    &none    &none    &none   &none
-    &none      &none   &kp F   &kp M  &kp H     &none                                                      &none  &kp K  &kp W  &kp G &none &none
+    &none      &none   &kp F   &kp M  &kp H     &kp 4                                                      &none  &kp K  &kp W  &kp G &none &none
  &kp Z   &kp N  &kp S  &kp T  &kp R  &kp Q                                                    &kp J  &kp A  &kp E  &kp C  &kp I  &kp X
     &none  &kp B  &kp V    &kp D  &kp L     &none   &kp C_VOL_DN  &kp C_VOL_UP &kp C_NEXT  &kp C_MUTE    &kp C_PP    &kp DEL       &none   &kp O  &kp U  &kp P  &kp Y     &none
-     &magic LAYER_Magic 0 &kp HOME &kp END &kp LEFT &kp RIGHT             &mt LCTRL TAB  &kp SPACE  &caps_tap 0 ESC    &kp DEL &kp BSPC &kp RET  &kp UP &kp DOWN &kp PG_UP &kp PG_DN  &magic LAYER_Magic 0
+     &magic LAYER_Magic 0 &kp HOME &kp END &kp LEFT &kp RIGHT             &mt LSHIFT TAB  &mt LCTRL SPACE  &caps_tap 0 ESC    &kp DEL &kp BSPC &kp RET  &kp UP &kp DOWN &kp PG_UP &kp PG_DN  &magic LAYER_Magic 0
             >;
         };
     };
