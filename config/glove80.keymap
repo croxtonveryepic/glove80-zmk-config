@@ -31,6 +31,7 @@
 #define LAYER_R_Secondary_Functions 3
 #define LAYER_L_Primary_Functions 4
 #define LAYER_L_Tertiary_Parens 5
+#define LAYER_Gaming 6
 
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
@@ -782,7 +783,7 @@ behaviors {
 
         layer_Base {
             bindings = <
-                &none               &none               &none                &none                &none                                                                                                                              &none                 &none                &none                &none                 &none
+                &none               &none               &none                &none                &none                                                                                                                              &none                 &none                &none                &none                 &tog 6
                 &none               &none               &none                &kp K                &none         &none                                                                                          &none                 &none                 &none                &none                &none                 &none
                 &none               &none         &blht DQT F        &blht MINUS M        &blht GRAVE H         &none                                                                                          &none         &blht UNDER K           &blht SQT W         &blht PLUS G                &none                 &none
          &blht PIPE Z  &left_pinky LGUI N  &left_ring1 LALT S  &left_middy LCTRL T  &left_index LSHFT R  &blht EXCL Q                                                                                  &blht CARET J  &right_index LSHFT A  &right_middy LCTRL E  &right_ring1 LALT C  &right_pinky LGUI I          &blht BSLH X
@@ -846,5 +847,18 @@ behaviors {
             >;
         };
 
+
+        layer_Gaming {
+            bindings = <
+                &none               &none               &none                &none                &none                                                                                                                              &none                 &none                &none                &none                 &none
+                &none               &none               &none                &kp TAB                &kp C_VOL_DN         &kp C_VOL_UP                                                                                          &none                 &none                 &none                &none                &none                 &none
+                &kp ESC               &none         &kp F        &kp M        &kp H         &none                                                                                          &none         &blht UNDER K           &blht SQT W         &blht PLUS G                &none                 &none
+         &kp Z  &kp N  &kp S  &kp T  &kp R  &kp Q                                                                                  &blht CARET J  &right_index LSHFT A  &right_middy LCTRL E  &right_ring1 LALT C  &right_pinky LGUI I          &blht BSLH X
+                &none       &kp B        &kp V          &kp D        &kp L         &none  &kp LALT  &none       &kp C_NEXT  &kp C_MUTE    &kp C_PP     &tog 6 &none          &blht FSLH O         &blht EQUAL U         &blht STAR P        &blht COLON Y                 &none
+
+ &magic LAYER_Magic 0            &kp HOME             &kp END             &kp LEFT            &kp RIGHT                   &kp LCTRL   &kp SPACE  &kp LSHFT     &kp DEL  &lt 3 BSPC  &lt 2 RET                               &kp UP              &kp DOWN            &kp PG_UP            &kp PG_DN  &magic LAYER_Magic 0
+
+            >;
+        };
     };
 };
