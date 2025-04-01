@@ -772,6 +772,17 @@ behaviors {
                 ;
         };
 
+        qu: qu {
+            label = "QU";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
+            bindings
+                , <&macro_tap &kp Q &kp U>
+                ;
+        };
+
     };
 };
 
@@ -782,22 +793,22 @@ behaviors {
 
  layer_Base {
  bindings = <
- &none &none &none &none &none
- &none &none &none &none &tog 6
+ &tog 5 &none &none &none &kp C_MUTE
+ &kp C_PP &none &none &none &tog 4
 
- &none &none &none &kp K &none &none
- &none &none &none &none &none &none
+ &none &none &none &kp K &kp C_VOL_DN &kp C_VOL_UP
+ &kp C_PREV &kp C_NEXT &kp DOT &none &none &none
 
- &none &none &blht DQT F &blht MINUS M &blht GRAVE H &none
- &none &blht UNDER K &blht SQT W &blht PLUS G &none &none
+ &none &none &blht DQT F &blht MINUS M &blht GRAVE H &qu
+ &kp FSLH &blht UNDER K &blht SQT W &blht PLUS G &none &none
 
  &blht PIPE Z &left_pinky LGUI N &left_ring1 LALT S &left_middy LCTRL T &left_index LSHFT R &blht EXCL Q
  &blht CARET J &right_index LSHFT A &right_middy LCTRL E &right_ring1 LALT C &right_pinky LGUI I &blht BSLH X
 
- &none &blht QMARK B &blht SEMI V &blht DOT D &blht COMMA L &none &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
- &kp C_MUTE &kp C_PP &tog 5 &none &blht FSLH O &blht EQUAL U &blht STAR P &blht COLON Y &none
+ &none &blht QMARK B &blht SEMI V &blht DOT D &blht COMMA L &kp J &kp CAPS &kp TILDE &none
+ &kp PERCENT &kp AMPS &none &kp HASH &blht FSLH O &blht EQUAL U &blht STAR P &blht COLON Y &none
 
- &magic LAYER_Magic 0 &kp HOME &kp END &kp LEFT &kp RIGHT &lt 4 TAB &lt 5 SPACE &caps_tap 0 ESC
+ &magic LAYER_Magic 0 &kp HOME &kp END &kp LEFT &kp RIGHT &lt 4 TAB &lt 6 SPACE &kp ESC
  &kp DEL &lt 3 BSPC &lt 2 RET &kp UP &kp DOWN &kp PG_UP &kp PG_DN &magic LAYER_Magic 0
  >;
  };
@@ -826,88 +837,67 @@ behaviors {
 
  layer_symbol {
  bindings = <
- &none &none &none &none &none
- &none &none &none &none &none
+ &none &none &none &none &kp C_MUTE
+ &kp C_PP &none &none &none &none
 
- &none &none &none &none &none &none
- &none &none &none &none &none &none
+ &none &none &none &kp K &kp C_VOL_DN &kp C_VOL_UP
+ &kp C_PREV &kp C_NEXT &kp DOT &none &none &none
 
- &none &none &kp AMPS &kp LT &kp GT &none
- &none &kp UNDER &kp SQT &kp PLUS &none &none
+ &none &none &kp AMPS &kp LT &kp GT &qu
+ &kp FSLH &kp UNDER &kp SQT &kp PLUS &none &none
 
  &kp AT &kp DLLR &kp LBKT &kp LPAR &kp LBRC &em_dash
  &kp CARET &kp RSHFT &kp RCTRL &kp RALT &kp RGUI &kp BSLH
 
- &none &kp HASH &kp RBKT &kp RPAR &kp RBRC &none &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
- &kp C_MUTE &kp C_PP &none &none &kp FSLH &kp EQUAL &kp STAR &kp COLON &none
+ &none &kp HASH &kp RBKT &kp RPAR &kp RBRC &kp J &kp CAPS &kp TILDE &none
+ &kp PERCENT &kp AMPS &tog 5 &kp HASH &kp FSLH &kp EQUAL &kp STAR &kp COLON &none
 
- &none &kp HOME &kp END &kp LEFT &kp RIGHT &kp TAB &kp SPACE &kp ESC
- &kp DEL &kp BSPC &kp RET &kp UP &kp DOWN &kp PG_UP &kp PG_DN &none
+ &magic LAYER_Magic 0 &kp HOME &kp END &kp LEFT &kp RIGHT &kp TAB &kp SPACE &kp ESC
+ &kp DEL &kp BSPC &kp RET &kp UP &kp DOWN &kp PG_UP &kp PG_DN &magic LAYER_Magic 0
  >;
  };
 
  layer_nums {
  bindings = <
- &none &none &none &none &none
- &none &none &none &none &none
+ &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans
 
- &none &none &none &none &none &none
- &none &none &none &none &none &none
+ &trans &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans &trans
 
- &none &none &kp N7 &kp N8 &kp N9 &none
- &none &kp UNDER &kp SQT &kp PLUS &none &none
+ &trans &trans &kp N7 &kp N8 &kp N9 &trans
+ &trans &kp UNDER &kp SQT &kp PLUS &trans &trans
 
  &kp PRCNT &kp N0 &kp N4 &kp N5 &kp N6 &en_dash
  &kp CARET &kp RSHFT &kp RCTRL &kp RALT &kp RGUI &kp BSLH
 
- &none &kp TILDE &kp N1 &kp N2 &kp N3 &none &trans &trans &trans
- &trans &trans &trans &none &kp FSLH &kp EQUAL &kp STAR &kp COLON &none
+ &trans &kp TILDE &kp N1 &kp N2 &kp N3 &trans &trans &trans &trans
+ &trans &trans &trans &trans &kp FSLH &kp EQUAL &kp STAR &kp COLON &trans
 
- &none &kp HOME &kp END &kp LEFT &kp RIGHT &kp DOT &kp SPACE &kp MINUS
- &kp DEL &kp BSPC &kp RET &kp UP &kp DOWN &kp PG_UP &kp PG_DN &none
+ &trans &kp HOME &kp END &kp LEFT &kp RIGHT &kp DOT &kp SPACE &kp MINUS
+ &kp DEL &kp BSPC &kp RET &kp UP &kp DOWN &kp PG_UP &kp PG_DN &trans
  >;
  };
 
- layer_funcs {
- bindings = <
- &none &none &none &none &none
- &none &none &none &none &none
-
- &none &none &none &none &none &none
- &none &none &none &none &none &none
-
- &none &none &kp DQT &kp MINUS &kp GRAVE &none
- &none &kp F7 &kp F8 &kp F9 &none &none
-
- &kp PIPE &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp EXCL
- &kp PSCRN &kp F4 &kp F5 &kp F6 &kp F11 &kp F12
-
- &none &kp QMARK &kp SEMI &kp DOT &kp COMMA &none &trans &trans &trans
- &trans &trans &trans &none &kp F1 &kp F2 &kp F3 &kp F10 &none
-
- &none &kp HOME &kp END &kp LEFT &kp RIGHT &kp TAB &kp SPACE &kp ESC
- &kp DEL &kp BSPC &kp RET &kp UP &kp DOWN &kp PG_UP &kp PG_DN &magic LAYER_Magic 0
- >;
- };
 
  layer_mouse {
  bindings = <
- &none &none &none &none &none
- &none &none &none &none &none
+ &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans
 
- &none &none &none &none &none &none
- &none &none &none &none &none &none
+ &trans &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans &trans
 
- &none &none &kp DQT &kp MINUS &kp GRAVE &none
- &none &kp F21 &kp F22 &kp F23 &none &none
+ &trans &trans &kp DQT &kp MINUS &kp GRAVE &trans
+ &trans &kp F21 &kp F22 &kp F23 &trans &trans
 
  &kp PIPE &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp EXCL
  &kp F17 &kp F18 &kp F19 &kp F20 &kp F24 &kp PSCRN
 
- &none &kp QMARK &kp SEMI &kp DOT &kp COMMA &none &trans &trans &trans
- &trans &trans &tog 5 &none &kp F15 &kp F16 &kp LC(C) &kp LC(V) &none
+ &trans &kp QMARK &kp SEMI &kp DOT &kp COMMA &trans &trans &trans &trans
+ &trans &trans &tog 4 &kp F15 &kp RET &kp F16 &kp LC(C) &kp LC(V) &trans
 
- &none &kp HOME &kp END &kp LEFT &kp RIGHT &kp TAB &kp SPACE &kp ESC
+ &trans &kp HOME &kp END &kp LEFT &kp RIGHT &kp TAB &kp SPACE &kp ESC
  &kp DEL &kp F13 &kp F14 &kp UP &kp DOWN &kp PG_UP &kp PG_DN &magic LAYER_Magic 0
  >;
  };
@@ -915,23 +905,45 @@ behaviors {
 
  layer_Gaming {
  bindings = <
- &none &none &none &none &none
- &none &none &none &none &none
+ &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans
 
- &none &none &none &kp TAB &kp C_VOL_DN &kp C_VOL_UP
- &none &none &none &none &none &none
+ &trans &trans &trans &kp TAB &trans &trans
+ &trans &trans &trans &trans &trans &trans
 
- &kp ESC &kp ESC &kp TAB &kp M &kp H &kpe K
- &none &blht UNDER K &blht SQT W &blht PLUS G &none &none
+ &kp ESC &kp ESC &kp TAB &kp M &kp H &kp K
+ &trans &blht UNDER K &blht SQT W &blht PLUS G &trans &trans
 
  &kp Z &kp LSHFT &kp S &kp T &kp R &kp Q
  &blht CARET J &right_index LSHFT A &right_middy LCTRL E &right_ring1 LALT C &right_pinky LGUI I &blht BSLH X
 
- &none &kp LCTRL &kp V &kp D &kp L &kp O &kp LCTRL &none &kp C_NEXT
- &kp C_MUTE &kp C_PP &tog 6 &none &blht FSLH O &blht EQUAL U &blht STAR P &blht COLON Y &none
+ &trans &kp LCTRL &kp V &kp D &kp L &kp O &kp LCTRL &trans &kp C_NEXT
+ &kp C_MUTE &kp C_PP &tog 5 &trans &blht FSLH O &blht EQUAL U &blht STAR P &blht COLON Y &trans
  
  &magic LAYER_Magic 0 &kp HOME &kp END &kp LEFT &kp RIGHT &kp LALT &kp SPACE &kp LSHFT
  &kp DEL &lt 3 BSPC &lt 2 RET &kp UP &kp DOWN &kp PG_UP &kp PG_DN &magic LAYER_Magic 0
+ >;
+ };
+
+ layer_funcs {
+ bindings = <
+ &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans
+
+ &trans &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans &trans
+
+ &trans &trans &kp DQT &kp MINUS &kp GRAVE &trans
+ &trans &kp F7 &kp F8 &kp F9 &trans &trans
+
+ &kp PIPE &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp EXCL
+ &kp PSCRN &kp F4 &kp F5 &kp F6 &kp F11 &kp F12
+
+ &trans &kp QMARK &kp SEMI &kp DOT &kp COMMA &trans &trans &trans &trans
+ &trans &trans &trans &trans &kp F1 &kp F2 &kp F3 &kp F10 &trans
+
+ &trans &kp HOME &kp END &kp LEFT &kp RIGHT &kp TAB &kp SPACE &kp ESC
+ &kp DEL &kp BSPC &kp RET &kp UP &kp DOWN &kp PG_UP &kp PG_DN &magic LAYER_Magic 0
  >;
  };
  };
