@@ -779,7 +779,7 @@ behaviors {
             tap-ms = <0>;
             wait-ms = <0>;
             bindings
-                , <&macro_tap &kp Q &kp U>
+                = <&macro_tap &kp Q &kp U>
                 ;
         };
 
